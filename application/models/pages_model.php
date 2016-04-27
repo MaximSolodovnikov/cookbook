@@ -23,6 +23,13 @@ class Pages_model extends CI_Model {
         return $query->result_array();
     }
     
+        public function get_ingrediets()
+    {
+        $this->db->order_by('id', 'desc');
+        $query = $this->db->get('ingredients');
+        return $query->result_array();
+    }
+    
     public function view_recipe($title)
     {
         $this->db->where('title_url', $title);

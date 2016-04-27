@@ -1,6 +1,8 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 
-            <h2 class="sub-header">Ингредиенты <a style="float: right; text-decoration: none; color: black; border: 2px solid grey; padding: 5px; margin-top: -10px;" href="">Добавить ингредиенты</a></h2>
+            <h2 class="sub-header">Ингредиенты 
+                <a class="my_btn" href="<?= base_url() ;?>index.php/pages/view/add_ingredients">Добавить ингредиенты</a>
+            </h2>
             
             <div class="table-responsive">
                 <table class="table table-striped">
@@ -11,14 +13,14 @@
                           </tr>
                     </thead>
                     <tbody>
-
+                        <?php foreach ($ingredients as $item): ?>
                       
                           <tr>
-                              <td><a href=""> x </a></td>
+                              <td><a href=""><?= $item['name']; ?></a></td>
                               <td> x </td>
                           </tr>
 
-
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>

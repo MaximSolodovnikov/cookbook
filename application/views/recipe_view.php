@@ -19,7 +19,6 @@
                     </tbody>
                 </table>
             </div>
-            <a style="float: right; text-decoration: none; color: black; border: 2px solid grey; padding: 5px; margin-top: -10px;" href="">Сохранить</a>
         </div>
     </div>
 </div>

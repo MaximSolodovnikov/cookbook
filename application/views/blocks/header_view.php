@@ -13,6 +13,9 @@
 
     <!-- Bootstrap core CSS -->
     <link href="<?= base_url(); ?>css/bootstrap.css" rel="stylesheet">
+    
+    <!-- My styles CSS -->
+    <link href="<?= base_url(); ?>css/my_style.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="<?= base_url(); ?>css/ie10-viewport-bug-workaround.css" rel="stylesheet">
