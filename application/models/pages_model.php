@@ -17,8 +17,16 @@ class Pages_model extends CI_Model {
     }
     
     public function get_recipes()
-        {
-            $query = $this->db->get('recipes');
-            return $query->result_array();
-        }
+    {
+        $this->db->order_by('id', 'desc');
+        $query = $this->db->get('recipes');
+        return $query->result_array();
+    }
+    
+    public function view_recipe($title)
+    {
+        $this->db->where('title_url', $title);
+        $query = $this->db->get('recipes');
+        return $query->row_array();
+    }
 }

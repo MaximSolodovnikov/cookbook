@@ -16,8 +16,17 @@ class Pages extends CI_Controller {
     {
         $data['pages'] = $this->pages_model->get_pages();
         $data['pages_info'] = $this->pages_model->get_pages_info('ingredients');
-        $data['recipes'] = $this->pages_model->get_recipes();
+        /*$data['recipes'] = $this->pages_model->get_recipes();*/
         $name = 'ingredients';
+        $this->template->page_view($data, $name);
+    }
+    
+    public function view($title)
+    {
+        $data['pages'] = $this->pages_model->get_pages();
+        $data['pages_info'] = $this->pages_model->view_recipe($title);
+       /* $data['recipes'] = $this->pages_model->get_recipes();*/
+        $name = 'recipe';
         $this->template->page_view($data, $name);
     }
 }

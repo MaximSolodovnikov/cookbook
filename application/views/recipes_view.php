@@ -15,7 +15,7 @@
 
                       <?php foreach($recipes as $item): ?>
                           <tr>
-                              <td><a href=""><?= $item['title']; ?></a></td>
+                              <td><a href="<?= base_url(); ?>index.php/pages/view/<?= $item['title_url']; ?>"><?= $item['title']; ?></a></td>
                               <td><?= $item['description']; ?></td>
                               <td> x </td>
                           </tr>
