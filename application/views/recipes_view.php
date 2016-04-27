@@ -1,7 +1,7 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 
             <h2 class="sub-header">Мои рецепты 
-                <a class="my_btn" href="<?= base_url() ;?>index.php/pages/view/add_recipes">Добавить рецепт</a>
+                <a class="my_btn" href="<?= base_url() ;?>index.php/pages/add/add_recipes">Добавить рецепт</a>
             </h2>
             
             <div class="table-responsive">

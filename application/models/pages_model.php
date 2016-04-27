@@ -30,7 +30,7 @@ class Pages_model extends CI_Model {
         return $query->result_array();
     }
     
-    public function view_recipe($title)
+    public function view_data($title)
     {
         $this->db->where('title_url', $title);
         $query = $this->db->get('recipes');

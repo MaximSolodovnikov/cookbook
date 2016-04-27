@@ -3,7 +3,13 @@ a.my_btn {
     text-decoration: none; 
     color: black; 
     border: 2px solid grey; 
-    padding: 5px; 
-    margin-top: -10px;
+    border-radius: 5px;
+    background-color: lightgray;
+    padding: 7px; 
+    margin-top: -20px;
+}
+
+.error {
+    color: red;
 }
 
