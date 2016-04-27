@@ -36,4 +36,14 @@ class Pages_model extends CI_Model {
         $query = $this->db->get('recipes');
         return $query->row_array();
     }
+    
+    public function add_data($page, $add)
+    {
+        if ($page == 'add_recipe') {
+            $this->db->insert('recipes', $add);
+        }
+        else {
+            $this->db->insert('ingredients', $add);
+        }
+    }
 }

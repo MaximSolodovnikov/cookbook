@@ -1,7 +1,7 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 
             <h2 class="sub-header">Ингредиенты 
-                <a class="my_btn" href="<?= base_url() ;?>index.php/pages/add/add_ingredients">Добавить ингредиенты</a>
+                <a class="my_btn" href="<?= base_url() ;?>index.php/pages/add_ingredients/add_ingredient">Добавить ингредиенты</a>
             </h2>
             
             <div class="table-responsive">

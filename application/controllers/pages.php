@@ -28,20 +28,45 @@ class Pages extends CI_Controller {
         $name = 'recipe';
         $this->template->page_view($data, $name);
     }
-    
-    public function add($page)
+  
+    public function add_recipes($page)
     {
         $this->load->model('rules_model');
         $data['pages'] = $this->pages_model->get_pages();
         $data['pages_info'] = $this->pages_model->view_data($page);
-        $name = $page;
+        $name = 'add_recipe';
         
         $this->form_validation->set_rules($this->rules_model->recipes);
+        if ($this->form_validation->run() && $this->input->post('add'))
+        {
+            $add['title'] = $this->input->post('title');
+            $add['description'] = $this->input->post('description');
+            
+            $this->pages_model->add_data($name, $add);
+            redirect(base_url());
+        }
+        else {
+            $this->template->page_view($data, $name);
+        }
+    }
+    
+    public function add_ingredients($page)
+    {
+        $this->load->model('rules_model');
+        $data['pages'] = $this->pages_model->get_pages();
+        $data['pages_info'] = $this->pages_model->view_data($page);
+        $name = 'add_ingredient';
+        
         $this->form_validation->set_rules($this->rules_model->ingredients);
         if ($this->form_validation->run() && $this->input->post('add'))
         {
+            $add['name'] = $this->input->post('name');
             
+            $this->pages_model->add_data($name, $add);
+            redirect(base_url() . 'index.php/pages/ingredients');
         }
-        $this->template->page_view($data, $name);
+        else {
+            $this->template->page_view($data, $name);
+        }
     }
 }
