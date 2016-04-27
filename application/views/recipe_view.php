@@ -15,7 +15,6 @@
                               <td><?= $pages_info['title']; ?></td>
                               <td><?= $pages_info['description']; ?></td>
                           </tr>
-
                     </tbody>
                 </table>
             </div>

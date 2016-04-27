@@ -5,6 +5,11 @@
                     <input class="form-control" type="text" name="title" value="<?= set_value('title'); ?>"><br /><br />
                     <label>Описание:</label><div class="error"><?= form_error('description'); ?></div>
                     <textarea class="form-control" rows="3" name="description"><?= set_value('description'); ?></textarea><br /><br />
+                    <hr>
+                    <label>Ингредиенты:</label><div class="error"></div>
+                    <input class="form-control" type="text" name="" value="">
+                    <label>Количество:</label><div class="error"></div>
+                    <input class="form-control" type="text" name="" value=""><br /><br />
                     <input type="submit" class="btn btn-info" name="add" value="Сохранить рецепт">
                 </form>
             </div>
